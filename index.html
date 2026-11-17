@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="weather-card">
+      <!-- Header / Search -->
+      <header class="weather-card-header">
+        <div class="search-box">
+          <input
+            type="text"
+            class="location-input"
+            id="locationInput"
+            placeholder="Search location..."
+            autocomplete="off"
+          />
+          <ul class="suggestions-list" id="suggestionsList" hidden></ul>
+        </div>
+      </header>
+
+      <!-- Main Body -->
+      <main class="weather-card-body">
+        <div class="location-wrapper">
+          <h1 class="location" id="location">--</h1>
+          <span class="timezone-badge" id="timezoneBadge">--</span>
+        </div>
+
+        <div class="hero-temp-section">
+          <div class="temp-display">
+            <span class="temp" id="temp">--</span>
+            <span class="unit">°C</span>
+          </div>
+          <p class="status" id="status">Loading...</p>
+          <div class="hi-lo-range">
+            <span>H: <strong id="max-temp">--°</strong></span>
+            <span class="dot">•</span>
+            <span>L: <strong id="min-temp">--°</strong></span>
+          </div>
+        </div>
+
+        <!-- Metrics Grid -->
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <span class="metric-label">Feels Like</span>
+            <span class="metric-value" id="apparentTemp">--</span>
+          </div>
+          <div class="metric-card">
+            <span class="metric-label">Humidity</span>
+            <span class="metric-value" id="humidity">--</span>
+          </div>
+          <div class="metric-card">
+            <span class="metric-label">Wind Speed</span>
+            <span class="metric-value" id="windSpeed">--</span>
+          </div>
+          <div class="metric-card">
+            <span class="metric-label">Precipitation</span>
+            <span class="metric-value" id="rainAmount">--</span>
+          </div>
+        </div>
+      </main>
+
+      <!-- Footer / 7-Day Forecast -->
+      <footer class="weather-card-footer">
+        <h2 class="footer-title">7-Day Forecast</h2>
+        <div class="daily-forecast" id="dailyForecast">
+          <!-- Populated dynamically via JS -->
+        </div>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
